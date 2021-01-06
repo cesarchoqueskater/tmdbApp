@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body {
+    background-color: #0F0E1C;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.card {
+    border: 0;
+}
+
+.card-container {
+    display: grid;
+    perspective: 700px;
+}
+
+.card-img {
+    height: 100%;
+    width: 100%;
+}
+
+.card-text {
+    display: -webkit-box;
+    line-height: 1.4;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.card-flip {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "grid-area";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+.card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.front {
+    grid-area: grid-area;
+}
+
+.back {
+    grid-area: grid-area;
+    transform: rotateY(-180deg);
+}
+
+.card-container:hover .card-flip {
+    transform: rotateY(180deg);
+}
+
+
+/* Response */
+
+@media only screen and (max-width: 542px) {
+    .container-fluid {
+        justify-content: center !important;
+    }
+    .row .count {
+        padding: 0 15% 0 15% !important;
+    }
+}
