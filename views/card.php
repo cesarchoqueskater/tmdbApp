@@ -22,8 +22,10 @@
                     </div>
                     <div class="card-footer">
                         <div class="center">
-                            <a href="/<?php echo $res["id"] ?>" class="btn btn-success">Más info</a>
+                        <button id="button_modal" class="btn btn-success">
+                                Más Info
                             <!-- <?php echo $page ?> -->
+                        </button>
                         </div>
                     </div>
                 </div>

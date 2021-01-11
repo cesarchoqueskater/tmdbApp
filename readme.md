@@ -16,14 +16,26 @@ Luego tenemos que generar la clave de la API, y colocarla en el archivo a contin
 
 ```php
 <?php
+
 //Colocar aqui la Clave de la API (v3 auth), que se obtendra al crear una cuenta en https://www.themoviedb.org/
 $API_KEY = 'CLAVE_API';
+
 ```
 ### Screenshot de la Aplicación
 
 [<img src="pictures_app/tmdb_1.png" />](pictures_app/tmdb_1.png)
 
+
 [<img src="pictures_app/tmdb_2.png" />](pictures_app/tmdb_2.png)
+
+### Correr Aplicación
+Para poder levantar un servidor web interno de php, debemos estar dentro de la carpeta donde se encuentra los recursos y tipear en consola
+
+```php
+php -S localhost:8000
+```
+
+
 
 >**Nota**
 Tener en cuenta que el nombre de la carpeta en donde se almacenara la aplicacion tiene que ser igual al nombre que se le da RewriteBase en el archivo `.htaccess`

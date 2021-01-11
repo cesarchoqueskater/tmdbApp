@@ -1,0 +1,264 @@
+/* Se hizo varios cambios del modal partiendo del codepen 
+ Agradecimiento: https://codepen.io/nainoashizuru/pen/PwJZVa */
+
+
+/* Modal */
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    min-height: 80%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: scale(1.2);
+    transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    overflow-x: hidden;
+    border-radius: 20px;
+}
+
+.modal .close-modal {
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 15px;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0.3s;
+    color: white;
+    text-decoration: none;
+}
+
+.modal .close-modal p {
+    width: 1.75em;
+    height: 1.75em;
+    font-size: 1.5rem;
+}
+
+.modal .modal-content {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition-delay: 0.3s;
+    border: 0 !important;
+}
+
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal.active .modal-content {
+    opacity: 1;
+}
+
+.modal.active .close-modal {
+    transform: translateY(10px);
+    opacity: 1;
+    z-index: 1000;
+}
+
+.img-card-model {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+.img-poster {
+    border-radius: 10px;
+}
+
+.modal-view {
+    width: 100%;
+    height: 100%;
+}
+
+.img-photo-background {
+    background-color: rgba(5.49%, 8.63%, 12.55%, 1.00);
+}
+
+.description-movie {
+    display: inline-block;
+    top: 17.5%;
+}
+
+.img-poster-background {
+    position: absolute;
+    left: 10vw;
+}
+
+.description-poster-background {
+    position: absolute;
+    left: 35vw;
+    color: white;
+    right: 10%;
+    overflow-y: auto;
+    height: 520px;
+}
+
+.img-poster {
+    width: 120%;
+}
+
+.title-movie {
+    font-size: 2.5em;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.genres-movie {
+    display: inline;
+    font-size: 1em;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.single-chart {
+    width: 30%;
+    justify-content: space-around;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0 5px 0 5px;
+    max-width: 50%;
+    max-height: 150px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.circular-chart.orange .circle {
+    stroke: #084298;
+}
+
+.percentage {
+    fill: #fff;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+}
+
+.percentage-movie {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 100px;
+    grid-template-columns: 1fr 6fr;
+    margin: 2em auto;
+}
+
+.puntuacion-text h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-top: 8px !important;
+}
+
+.sub_title-movie {
+    font-weight: bold;
+}
+
+
+/* Tablet */
+
+@media only screen and (min-width: 640px) {
+    .modal-overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    }
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .description-poster-background {
+        margin-left: 4 0px;
+    }
+}
+
+
+/* Mobile  */
+
+@media only screen and (max-width: 624px) {
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0;
+        transform: scale(1.1);
+        padding: 0 !important;
+    }
+    .close-modal {
+        right: 20px !important;
+    }
+    .img-photo-background {
+        height: 100vh;
+    }
+    .img-card-model {
+        height: 100vh;
+    }
+    .description-poster-background {
+        left: 10vw;
+        right: 10%;
+    }
+    .img-poster-background {
+        display: none;
+    }
+}
+
+
+/* Before Desktop */
+
+@media only screen and (max-width: 1088px) {
+    .img-poster-background {
+        display: none;
+    }
+    .description-poster-background {
+        left: 5vw;
+    }
+}
