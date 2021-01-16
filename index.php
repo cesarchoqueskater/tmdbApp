@@ -1,12 +1,12 @@
 <?php 
-    include("api/connection_api.php");
-    include("views/header.php");
+    include("resources/connection_api.php");
+    include("resources/templates/header.php");
 ?>
 
 <div class="images-row mt-5">
     <div class="row" id="colocar">
-     <?php include("views/card.php"); ?>
+     <?php include("resources/templates/card.php"); ?>
     </div>
 </div>
 
-<?php include("views/footer.php") ;?>
+<?php include("resources/templates/footer.php") ;?>

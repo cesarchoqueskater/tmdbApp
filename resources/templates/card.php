@@ -11,21 +11,18 @@
                     <div class="card-header"><?php echo $res["title"] ?></div>
                     <div class="card-body">
                         <div class="card-text">
-            <?php                
-                if( strlen($res["overview"]) === 0){
-                    echo "No posee descripción." ;
-                }else{
-                    echo $res["overview"]; 
-                }
-            ?>
+                            <?php                
+                                if( strlen($res["overview"]) === 0){
+                                    echo "No posee descripción." ;
+                                }else{
+                                    echo $res["overview"]; 
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="card-footer">
                         <div class="center">
-                        <button id="button_modal" class="btn btn-success">
-                                Más Info
-                            <!-- <?php echo $page ?> -->
-                        </button>
+                            <input type="button" class="button_modal btn btn-success" value="Más info" id="<?php echo $res["id"] ?>">
                         </div>
                     </div>
                 </div>

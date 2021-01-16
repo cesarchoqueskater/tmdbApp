@@ -1,6 +1,6 @@
 <?php
 
-require_once '../api/api_key.php';
+require '../../resources/api_key_tmdb.php';
 
 if(isset($_POST['number_page'])){
     $page = $_POST["number_page"];
@@ -16,7 +16,7 @@ if(isset($_POST['number_page'])){
 <?php
 
 }else{
-    printf( "No llegó el valor number_page");
+    printf( "No llegó el valor de la pagina");
     return null;
 }
 
