@@ -1,9 +1,14 @@
 # Proyecto THE MOVIE DATABASE
 ## Aplicacion PHP + API de TMDB
 
->La aplicacion todavia esta en desarrollo, falta mejorar codigo
+### Funciones de la Aplicación
+Esta aplicacion esta basada en PHP y consume la api de la plataforma de peliculas The Movie Database [themoviedb](https://www.themoviedb.org/)
 
-Este aplicacion esta basada en PHP y consume la api de la plataforma de peliculas The Movie Database [themoviedb](https://www.themoviedb.org/)
+| Acciones   | Archivo |
+| ------ | ------   |
+| Cargar Peliculas |   :heavy_check_mark:  |
+| Detalle de cada Pelicula |  :heavy_check_mark:   |
+| Buscar Peliculas |   :memo: **En desarrollo**  |
 
 ### Clave de la API
 Para poder usar la aplicacion tenemos que crearnos una cuenta en https://www.themoviedb.org/ .
@@ -12,7 +17,7 @@ Luego tenemos que generar la clave de la API, y colocarla en el archivo a contin
 
 | Ruta   | Archivo |
 | ------ | ------   |
-| api | api_key.php    |
+| resources | api_key_tmdb.php    |
 
 ```php
 <?php
@@ -21,14 +26,21 @@ Luego tenemos que generar la clave de la API, y colocarla en el archivo a contin
 $API_KEY = 'CLAVE_API';
 
 ```
-### Screenshot de la Aplicación
-
+# Screenshot de la Aplicación
+##**Index** :computer:
 [<img src="pictures_app/tmdb_1.png" />](pictures_app/tmdb_1.png)
 
 
 [<img src="pictures_app/tmdb_2.png" />](pictures_app/tmdb_2.png)
 
-### Correr Aplicación
+##**Detalle de Pelicula** :movie_camera:
+
+[<img src="pictures_app/tmdb_modal_1.png" />](pictures_app/tmdb_modal_1.png)
+
+
+[<img src="pictures_app/tmdb_modal_2.png" />](pictures_app/tmdb_modal_2.png)
+
+# Correr Aplicación
 Para poder levantar un servidor web interno de php, debemos estar dentro de la carpeta donde se encuentra los recursos y tipear en consola
 
 ```php
