@@ -61,15 +61,3 @@ body {
 .card-container:hover .card-flip {
     transform: rotateY(180deg);
 }
-
-
-/* Response */
-
-@media only screen and (max-width: 542px) {
-    .container-fluid {
-        justify-content: center !important;
-    }
-    .row .count {
-        padding: 0 15% 0 15% !important;
-    }
-}

@@ -254,6 +254,12 @@
     .img-poster-background {
         display: none;
     }
+    .container-fluid {
+        justify-content: center !important;
+    }
+    .row .count {
+        padding: 0 15% 0 15% !important;
+    }
 }
 
 
